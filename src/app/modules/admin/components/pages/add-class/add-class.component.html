@@ -1,0 +1,78 @@
+<div class="container">
+ <h1>classes</h1>
+ <div style="float:right">
+  <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Add class</button>
+ </div>
+<br>
+<br>
+ <table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Sl No</th>
+      <th scope="col">Class</th>
+      <th scope="col">Strenth</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>VIII</td>
+      <td>30</td>
+      <td><button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button></td>
+      <td><button class="btn btn-danger">Delete</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>IX</td>
+      <td>35</td>
+      <td><button class="btn btn-info">Edit</button></td>
+      <td><button class="btn btn-danger">Delete</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>X</td>
+      <td>40</td>
+      <td><button class="btn btn-info">Edit</button></td>
+      <td><button class="btn btn-danger">Delete</button></td>
+    </tr>
+
+  </tbody>
+</table>
+
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputClass" class="form-label">Class </label>
+            <input type="text" class="form-control" id="inputClass" >
+
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Strenth</label>
+            <input type="number" class="form-control" id="inputStrength">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

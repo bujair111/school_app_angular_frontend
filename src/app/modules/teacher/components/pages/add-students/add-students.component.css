@@ -1,0 +1,15 @@
+.con
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  min-height: 520px;
+
+}
+form{
+  margin: 20px;
+  padding: 20px;
+  min-width: 500px;
+}

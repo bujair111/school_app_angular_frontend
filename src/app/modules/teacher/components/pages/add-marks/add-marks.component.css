@@ -1,0 +1,48 @@
+/* form{
+  margin: 10px;
+  padding: 10px;
+  width: 500px;
+} */
+
+.heading{
+  margin: 20px;
+  padding: 20px;
+}
+.sec
+{
+ margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form{
+	padding-top: 10px;
+	font-size: 13px;
+	margin-top: 30px;
+
+}
+
+.card-title{ font-weight:300; }
+
+.btn{
+	font-size: 13px;
+}
+
+.login-form{
+	width:800px;
+	margin:20px;
+}
+
+.sign-up{
+	text-align:center;
+	padding:20px 0 0;
+}
+
+span{
+	font-size:14px;
+}
+
+.submit-btn{
+	margin-top:20px;
+}
