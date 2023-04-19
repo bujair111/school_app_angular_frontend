@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
+import { TeacherService } from '../../../services/teacher/teacher.service';
 
 @Component({
   selector: 'app-view-teacher',
@@ -12,6 +13,27 @@ export class ViewTeacherComponent implements AfterViewInit {
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  constructor(private teacherService: TeacherService){}
+  teachersList: any
+
+  ngOnInit(){
+this.displayTeachersList()
+  }
+
+  displayTeachersList(){
+
+    this.teacherService.loadTeachersList().subscribe((res:{ teachers: any, statusCode: number, msg: string})=>{
+      this.teachersList = res.teachers
+      console.log(this.teachersList)
+      console.log(res.msg)
+      
+    })
+
+  }
+
+
+
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;

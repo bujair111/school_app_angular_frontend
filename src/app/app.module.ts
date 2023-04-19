@@ -14,6 +14,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SharedModuleModule } from './shared/modules/shared-module/shared-module.module';
+import { AdminLoginComponent } from './components/pages/admin-login/admin-login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { TeacherLoginComponent } from './components/pages/teacher-login/teacher-login.component';
 
 
 @NgModule({
@@ -24,6 +28,8 @@ import { SharedModuleModule } from './shared/modules/shared-module/shared-module
     HeaderComponent,
     HomeComponent,
     NavbarComponent,
+    AdminLoginComponent,
+    TeacherLoginComponent,
 
 
 
@@ -33,7 +39,9 @@ import { SharedModuleModule } from './shared/modules/shared-module/shared-module
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    SharedModuleModule
+    SharedModuleModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

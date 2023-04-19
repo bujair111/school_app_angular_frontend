@@ -15,6 +15,7 @@ import { TSidebarComponent } from './components/t-sidebar/t-sidebar.component';
 import { SharedModuleModule } from 'src/app/shared/modules/shared-module/shared-module.module';
 import { ViewProfileComponent } from './components/pages/view-profile/view-profile.component';
 import { ChangePasswordComponent } from './components/pages/change-password/change-password.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { ChangePasswordComponent } from './components/pages/change-password/chan
     CommonModule,
     TeacherRoutingModule,
     MaterialModule,
-    SharedModuleModule
+    SharedModuleModule,
+    FormsModule
   ]
 })
 export class TeacherModule { }

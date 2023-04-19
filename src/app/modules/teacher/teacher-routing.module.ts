@@ -8,9 +8,12 @@ import { ApproveLeaveComponent } from './components/pages/approve-leave/approve-
 import { AddMarksComponent } from './components/pages/add-marks/add-marks.component';
 import { ViewProfileComponent } from './components/pages/view-profile/view-profile.component';
 import { ChangePasswordComponent } from './components/pages/change-password/change-password.component';
+import { TokenGuard } from './guards/token.guard';
 
 const routes: Routes = [
   { path: '', component: TeacherComponent,
+  canActivate: [TokenGuard],
+
   children:[
     { path: '', component: THomeComponent },
     { path: 'home', component: THomeComponent },

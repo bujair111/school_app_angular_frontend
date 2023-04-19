@@ -1,49 +1,55 @@
 
 <div class="con">
 
-  <form>
+  <form #form="ngForm" (submit)="teacherFormSubmit(form.value)">
     <h1>Add Teacher </h1>
     <div class="mb-3">
       <label for="Name" class="form-label">Name</label>
-      <input type="text" class="form-control" id="inputName" >
+      <input type="text" ngModel name="name" class="form-control" id="inputName" >
 
     </div>
     <div class="mb-3">
       <label for="designatin" class="form-label">Designation</label>
-      <input type="text" class="form-control" id="inputDESignation" >
+      <input type="text" ngModel name="designation" class="form-control" id="inputDESignation" >
 
     </div>
     <div class="mb-3">
       <label for="email" class="form-label">Email</label>
-      <input type="text" class="form-control" id="inputEmail" >
+      <input type="text" ngModel name="email" class="form-control" id="inputEmail" >
 
     </div>
     <div class="mb-3">
       <label for="Phone" class="form-label">Phone</label>
-      <input type="text" class="form-control" id="inputPhone" >
+      <input type="text" ngModel name="phone" class="form-control" id="inputPhone" >
 
     </div>
     <div class="mb-3">
       <label for="gender" class="form-label">Gender</label>:
 
       <label for="male">Male </label>
-      <input type="radio" class="" id="inputMale" >
+      <input ngModel  name="gender" value="male" type="radio" class="" id="inputMale" >
       <label for="female">Female</label>
-      <input type="radio" class="" id="inputFemale">
+      <input ngModel name="gender" value="female" type="radio" class="" id="inputFemale">
 
     </div>
     <div class="mb-3">
       <label for="DOB" class="form-label">DOB</label>
-      <input type="date" class="form-control" id="inputDate" >
+      <input type="date" ngModel name="dob" class="form-control" id="inputDate" >
+
+    </div>
+    <div class="mb-3">
+      <label for="DOB" class="form-label">image</label>
+      <input type="file" (change)="onImageChanged($event)" ngModel name="pic" class="form-control" id="inputimage" >
 
     </div>
     <div class="mb-3">
       <label for="password" class="form-label">password</label>
-      <input type="password" class="form-control" id="inputPassword" >
+      <input type="password" ngModel name="password" class="form-control" id="inputPassword" >
 
     </div>
     <button mat-raised-button color="primary" type="submit">Submit</button>
   </form>
+  {{ msg }}
 </div>
 
 

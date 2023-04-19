@@ -19,6 +19,7 @@ import { AddSalaryComponent } from './components/pages/add-salary/add-salary.com
 import { AddFeesComponent } from './components/pages/add-fees/add-fees.component';
 import { AssignTeacherComponent } from './components/pages/assign-teacher/assign-teacher.component';
 import { SharedModuleModule } from 'src/app/shared/modules/shared-module/shared-module.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -44,7 +45,8 @@ import { SharedModuleModule } from 'src/app/shared/modules/shared-module/shared-
     CommonModule,
     AdminRoutingModule,
     MaterialModule,
-    SharedModuleModule
+    SharedModuleModule,
+    FormsModule
 
   ]
 })

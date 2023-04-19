@@ -11,9 +11,11 @@ import { AddSalaryComponent } from './components/pages/add-salary/add-salary.com
 
 import { ViewStudentComponent } from './components/pages/view-student/view-student.component';
 import { AssignTeacherComponent } from './components/pages/assign-teacher/assign-teacher.component';
+import { TokenGuard } from './guards/token.guard';
 
 const routes: Routes = [
 { path: '', component: AdminComponent,
+canActivate:[TokenGuard],
   children:[
     {path:'home',component:AdminHomeComponent},
     {path: '', component: AdminHomeComponent},
